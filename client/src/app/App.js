@@ -1,9 +1,10 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
+import SignUp from "../views/authentication/signUp/signUp";
+
 function App() {
-  return <div>Hello World</div>;
+  return <SignUp />;
 }
 
 export default App;
