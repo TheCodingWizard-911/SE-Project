@@ -4,7 +4,11 @@ import "./App.css";
 import SignUp from "../views/authentication/signUp/signUp";
 
 function App() {
-  return <SignUp />;
+  return (
+    <div className="App">
+      <SignUp />
+    </div>
+  );
 }
 
 export default App;

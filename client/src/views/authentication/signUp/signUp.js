@@ -1,47 +1,58 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import DefaultButton from "../../../components/buttons/button";
 import "./signUp.css";
 
 const SignUp = () => {
   return (
-    <form>
-      <h3>Register</h3>
+    <div className="SignUpFormContainer">
+      <div className="SignUpForm">
+        <form>
+          <h3 className="text-center">
+            <strong>Sign Up for CO-convo-EP</strong>
+          </h3>
 
-      <div className="form-group">
-        <label>First name</label>
-        <input type="text" className="form-control" placeholder="First name" />
+          <div className="form-group">
+            <label>
+              <strong>Email</strong>
+            </label>
+            <input
+              type="email"
+              className="form-control"
+              placeholder="Enter email"
+            />
+          </div>
+
+          <div className="form-group">
+            <label>
+              <strong>Password</strong>
+            </label>
+            <input
+              type="password"
+              className="form-control"
+              placeholder="Enter password"
+            />
+          </div>
+
+          <div className="form-group">
+            <label>
+              <strong>Confirm Password</strong>
+            </label>
+            <input
+              type="password"
+              className="form-control"
+              placeholder="Re-Enter password"
+            />
+          </div>
+
+          <div className="button">
+            <DefaultButton text="Sign Up" />
+          </div>
+          <p className="text-left">
+            Already have an account? <strong> LogIn here</strong>
+          </p>
+        </form>
       </div>
-
-      <div className="form-group">
-        <label>Last name</label>
-        <input type="text" className="form-control" placeholder="Last name" />
-      </div>
-
-      <div className="form-group">
-        <label>Email</label>
-        <input
-          type="email"
-          className="form-control"
-          placeholder="Enter email"
-        />
-      </div>
-
-      <div className="form-group">
-        <label>Password</label>
-        <input
-          type="password"
-          className="form-control"
-          placeholder="Enter password"
-        />
-      </div>
-
-      <button type="submit" className="btn btn-dark btn-lg btn-block">
-        Register
-      </button>
-      <p className="forgot-password text-right">
-        Already registered <strong>log in?</strong>
-      </p>
-    </form>
+    </div>
   );
 };
 

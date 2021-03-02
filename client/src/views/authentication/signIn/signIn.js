@@ -1,50 +1,49 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import DefaultButton from "../../../components/buttons/button";
 import "./signIn.css";
 
 const SignIn = () => {
   return (
-    <form>
-      <h3>Log in</h3>
+    <div className="SignInFormContainer">
+      <div className="SignInForm">
+        <form>
+          <h3 className="text-center">
+            <strong>Log in to CO-convo-EP</strong>
+          </h3>
 
-      <div className="form-group">
-        <label>Email</label>
-        <input
-          type="email"
-          className="form-control"
-          placeholder="Enter email"
-        />
+          <div className="form-group">
+            <label>
+              <strong>Email</strong>
+            </label>
+            <input
+              type="email"
+              className="form-control"
+              placeholder="Enter email"
+            />
+          </div>
+
+          <div className="form-group">
+            <label>
+              <strong>Password</strong>
+            </label>
+            <input
+              type="password"
+              className="form-control"
+              placeholder="Enter password"
+            />
+          </div>
+          <p className="forgot-password text-right">
+            <strong>Forgot password?</strong>
+          </p>
+          <div className="button">
+            <DefaultButton text="Log In" />
+          </div>
+          <p className="text-left">
+            Don't have an account? <strong> SignUp here</strong>
+          </p>
+        </form>
       </div>
-
-      <div className="form-group">
-        <label>Password</label>
-        <input
-          type="password"
-          className="form-control"
-          placeholder="Enter password"
-        />
-      </div>
-
-      <div className="form-group">
-        <div className="custom-control custom-checkbox">
-          <input
-            type="checkbox"
-            className="custom-control-input"
-            id="customCheck1"
-          />
-          <label className="custom-control-label" htmlFor="customCheck1">
-            Remember me
-          </label>
-        </div>
-      </div>
-
-      <button type="submit" className="btn btn-dark btn-lg btn-block">
-        Sign in
-      </button>
-      <p className="forgot-password text-right">
-        <strong>Forgot password?</strong>
-      </p>
-    </form>
+    </div>
   );
 };
 
