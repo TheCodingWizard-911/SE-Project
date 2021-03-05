@@ -1,12 +1,11 @@
 import React from "react";
+import HomePage from "../views/mainpage/homePage";
 import "./App.css";
-
-import SignUp from "../views/authentication/signUp/signUp";
 
 function App() {
   return (
     <div className="App">
-      <SignUp />
+      <HomePage />
     </div>
   );
 }
